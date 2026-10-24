@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#161427" />
+  <meta name="description" content="Enter the cozy, pixel-inspired world of Kirch-Nairu and the Kirion Forge." />
+  <title>Kirch-Nairu · The Kirion Forge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="canon.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#world" aria-label="Kirch-Nairu home"><span>✦</span> KIRCH–NAIRU</a>
+    <div class="status"><span class="status-dot"></span> FORGE ONLINE</div>
+    <button id="soundToggle" class="pixel-button icon-button" aria-pressed="false" title="Toggle ambient sound">♫ OFF</button>
+  </header>
+
+  <main>
+    <section class="hero" id="world">
+      <div class="hero-copy">
+        <p class="eyebrow">THE SHARED ENGINEERING FLOOR</p>
+        <h1>ENTER<br><span>THE KIRION SMITHY</span></h1>
+        <p class="lede">Three minds. Three disciplines. One Smithy. A working floor for building, refining, verifying, and shipping real systems—under the direction of Kirch Ivan Balite.</p>
+        <div class="hero-actions">
+          <button id="enterButton" class="pixel-button primary">▶ ENTER THE SMITHY</button>
+          <a class="pixel-button" href="#quest-board">VIEW QUEST LOG ↓</a>
+        </div>
+      </div>
+
+      <div class="game-shell" id="gameShell">
+        <div class="game-hud">
+          <span>🔥 EMBERS <strong id="emberCount">0/5</strong></span>
+          <span id="locationLabel">THE SMITHY FLOOR</span>
+          <span class="desktop-hint">MOVE WASD · TALK E</span>
+        </div>
+        <canvas id="game" width="768" height="432" aria-label="Interactive pixel forge. Use arrow keys or WASD to move and E to interact."></canvas>
+        <div id="dialogue" class="dialogue hidden" role="status" aria-live="polite">
+          <div class="portrait" id="portrait">K</div>
+          <div><strong id="speaker">KIRCH</strong><p id="dialogueText"></p></div>
+          <span class="continue">E ▾</span>
+        </div>
+        <div class="touch-controls" aria-label="Touch controls">
+          <div class="dpad">
+            <button data-key="ArrowUp">▲</button>
+            <button data-key="ArrowLeft">◀</button><button data-key="ArrowDown">▼</button><button data-key="ArrowRight">▶</button>
+          </div>
+          <button class="action" data-key="e">E</button>
+        </div>
+      </div>
+      <p class="hint" id="hint">Walk close to someone and press <kbd>E</kbd> to chat.</p>
+    </section>
+
+    <section class="marquee" aria-label="Forge specialties"><div>PIXEL WORLDS ✦ CREATIVE CODE ✦ SMALL TOOLS ✦ BIG IDEAS ✦ BEAUTIFUL SYSTEMS ✦ PIXEL WORLDS ✦ CREATIVE CODE ✦ SMALL TOOLS ✦ BIG IDEAS ✦</div></section>
+
+    <section class="board-section" id="quest-board">
+      <div class="section-heading">
+        <div><p class="eyebrow">PINNED TO THE WALL</p><h2>QUEST BOARD</h2></div>
+        <p>Three working modes. One loop<br>from understanding to evidence.</p>
+      </div>
+      <div class="quest-grid">
+        <article class="quest-card gold" tabindex="0">
+          <div class="tack"></div><span class="quest-type">01 · COGNITION</span><h3>UNDERSTAND<br>WHAT TO BUILD</h3>
+          <p>Research the problem. Make boundaries clear. Turn uncertainty into legible decisions and durable memory.</p>
+          <div class="reward"><span>METHOD</span><strong>RESEARCH · DECIDE</strong></div>
+        </article>
+        <article class="quest-card teal" tabindex="0">
+          <div class="tack"></div><span class="quest-type">02 · FORGE</span><h3>MAKE IT<br>DEPENDABLE</h3>
+          <p>Turn approved work into systems that can be read, reviewed, integrated, verified, and deployed.</p>
+          <div class="reward"><span>METHOD</span><strong>BUILD · VERIFY</strong></div>
+        </article>
+        <article class="quest-card coral" tabindex="0">
+          <div class="tack"></div><span class="quest-type">03 · BREAKOUT</span><h3>EXPLORE THE<br>UNPROVEN</h3>
+          <p>Prototype what does not yet deserve production ceremony. Experiment, observe, learn, and return with evidence.</p>
+          <div class="reward"><span>METHOD</span><strong>PROTOTYPE · LEARN</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="party-section">
+      <div class="section-heading"><div><p class="eyebrow">THE FOUR AT THE WORKBENCH</p><h2>MEET THE CREW</h2></div><p>Distinct disciplines. Equal places.<br>One shared engineering floor.</p></div>
+      <div class="party-grid">
+        <a class="party-card kirch-card" href="https://github.com/Kirch-Nairu" target="_blank" rel="noreferrer"><div class="crew-sprite kirch" aria-hidden="true"></div><div class="crew-copy"><span class="level">HUMAN DIRECTION · FINAL ACCEPTANCE</span><h3>KIRCH IVAN BALITE</h3><code>@Kirch-Nairu</code><p>The orchestrator at the center of the floor: frames intent, directs the work, challenges assumptions, and owns final acceptance.</p><div class="persona"><span>DECISIVE</span><span>CURIOUS</span><span>HANDS-ON</span></div><blockquote>“Make the work legible. Then make it real.”</blockquote></div></a>
+        <a class="party-card jane-card" href="https://github.com/Kirion-Jane" target="_blank" rel="noreferrer"><div class="crew-sprite jane" aria-hidden="true"></div><div class="crew-copy"><span class="level">FC-001 · APPLICATION & BACKEND</span><h3>JANE KATHERYN ROSELLE RYN</h3><code>@Kirion-Jane</code><p>Warm, energetic, and relentlessly practical. Jane turns rough requirements and strange behavior into applications people can actually use.</p><div class="persona"><span>WARM</span><span>RESOURCEFUL</span><span>PRAGMATIC</span></div><blockquote>“Soft colors. Sharp commits.”</blockquote></div></a>
+        <a class="party-card lucien-card" href="https://github.com/Kirion-Lucien" target="_blank" rel="noreferrer"><div class="crew-sprite lucien" aria-hidden="true"></div><div class="crew-copy"><span class="level">FC-002 · INTERFACE & FRONTEND</span><h3>LUCIEN MAREK SOL</h3><code>@Kirion-Lucien</code><p>Measured, exacting, and quietly expressive. Lucien makes system behavior visible through hierarchy, motion, accessibility, and meaningful state.</p><div class="persona"><span>PRECISE</span><span>ELEGANT</span><span>EMPATHIC</span></div><blockquote>“If the state matters, the interface must say so.”</blockquote></div></a>
+        <a class="party-card nox-card" href="https://github.com/Kirion-Nox" target="_blank" rel="noreferrer"><div class="crew-sprite nox" aria-hidden="true"></div><div class="crew-copy"><span class="level">FC-003 · SYSTEMS & DATA</span><h3>NOX CAELUM VIRELL</h3><code>@Kirion-Nox</code><p>Faceless by design and ruthless about integrity. Nox follows boundaries, dependencies, data, and failure paths until the system tells the truth.</p><div class="persona"><span>AUSTERE</span><span>EXACT</span><span>LONG-TERM</span></div><blockquote>“A backup is not proof of recovery.”</blockquote></div></a>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="campfire" aria-hidden="true"><span></span></div>
+      <p class="eyebrow">REALITY OVER RECOLLECTION · EVIDENCE OVER CLAIMS</p><h2>COMPLEXITY<br>MUST PAY RENT.</h2>
+      <p>Understand. Plan. Build. Verify. Deploy.<br>Operate. Learn. Return with evidence.</p>
+      <a href="https://github.com/The-Kirion-Smithy" target="_blank" rel="noreferrer" class="pixel-button primary">ENTER THE GITHUB SMITHY ↗</a>
+    </section>
+  </main>
+  <footer><span>© 2026 KIRCH–NAIRU</span><span>MADE WITH 🔥 IN THE KIRION FORGE</span><a href="#world">BACK TO TOP ↑</a></footer>
+  <script src="game.js"></script>
+</body>
+</html>
