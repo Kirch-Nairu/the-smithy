@@ -7,9 +7,9 @@ const [html, css, script] = await Promise.all([
   readFile(new URL("apps/pixel-smithy/dist/game.js", root), "utf8"),
 ]);
 
-const requiredHtml = ["danceButton", "danceStage", "danceClose", "kirchDanceCanvas", "kirch-dancer", "danceMusic", "KNEE + CROSS", "KNEE + POINT", "t=120s"];
+const requiredHtml = ["danceButton", "danceStage", "danceClose", "kirchDanceCanvas", "kirch-dancer", "danceMusic", "SIDE TAP", "SHOULDER TURN", "HIP GROOVE", "HIT THE POSE", "t=120s"];
 const requiredCss = ["canvas.kirch-dancer", "translateX(-50%)", "image-rendering:pixelated", "prefers-reduced-motion"];
-const requiredScript = ["kirch-chilly-cha-cha-48-frame-v3.png", "1000/12", "%48", "start=120", "openDance", "closeDance", "Escape", "youtube-nocookie.com"];
+const requiredScript = ["kirch-brazilian-8-count-32-frame-v1.png", "1000/12", "%32", "start=120", "openDance", "closeDance", "Escape", "youtube-nocookie.com"];
 
 for (const token of requiredHtml) if (!html.includes(token)) throw new Error(`Dance markup is missing ${token}`);
 for (const token of requiredCss) if (!css.includes(token)) throw new Error(`Dance styling is missing ${token}`);
