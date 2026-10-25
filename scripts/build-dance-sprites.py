@@ -1,4 +1,4 @@
-"""Build a centered 48-frame loop from the 12 approved choreography poses."""
+"""Build a centered 32-frame loop from the approved Brazilian 8-count poses."""
 
 from pathlib import Path
 import sys
@@ -8,7 +8,7 @@ from PIL import Image
 
 CELL = 256
 SOURCE_COLUMNS = 4
-SOURCE_ROWS = 3
+SOURCE_ROWS = 2
 OUTPUT_COLUMNS = 8
 INBETWEENS = 4
 
