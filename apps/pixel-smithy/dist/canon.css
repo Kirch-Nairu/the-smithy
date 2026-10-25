@@ -25,3 +25,28 @@
 @media(max-width:850px){.dance-stage{grid-template-columns:1fr;padding:70px 20px 110px}.dance-copy{text-align:center}.dance-copy>p:not(.eyebrow){margin-inline:auto}.beat-meter{justify-content:center}.dance-floor{width:min(520px,100%);min-height:430px}.dance-music{left:18px;right:18px;width:auto}}
 @media(prefers-reduced-motion:reduce){.kirch-dancer,.dancer-body,.dancer-arm,.dancer-hand,.dancer-leg,.dancer-shoe,.dancer-shadow,.beat-meter i,.dance-floor:before,.dance-caption span{animation:none!important}.kirch-dancer{transform:none}.dance-copy:after{content:"Motion reduced by your system preference.";display:block;margin-top:12px;color:#f2b84b;font-size:12px}}
 .dance-track-link{display:inline-block;margin-top:12px;color:#f2b84b;font-size:12px;letter-spacing:1px}
+
+/* Twelve choreography-derived frames replace the original articulated placeholder. */
+.dance-floor .kirch-dancer{position:relative;z-index:3;width:min(390px,82%);height:auto;aspect-ratio:384/341;background-image:url('assets/kirch-chilly-cha-cha-12-frame-v1.png');background-repeat:no-repeat;background-size:400% 300%;background-position:0 0;image-rendering:pixelated;filter:drop-shadow(0 18px 8px #09071199);animation:kirch-chilly-cha-cha 6s steps(1,end) infinite;transform:none}
+.dance-floor .dancer-shadow{position:absolute;z-index:2;left:50%;bottom:74px;width:42%;height:22px;background:#08061099;transform:translateX(-50%);animation:choreo-shadow 1s steps(2,end) infinite}
+.dance-caption{left:50%;transform:translateX(-50%);width:max-content;max-width:94%;justify-content:center;flex-wrap:wrap}.dance-caption span{animation:choreo-caption 6s steps(1,end) infinite}.dance-caption span:nth-child(2){animation-delay:0s}.dance-caption span:nth-child(3){animation-delay:0s}.dance-caption span:nth-child(4){animation-delay:0s}
+@keyframes kirch-chilly-cha-cha{
+  0%,8.32%{background-position:0 0}
+  8.33%,16.65%{background-position:33.333% 0}
+  16.66%,24.99%{background-position:66.666% 0}
+  25%,33.32%{background-position:100% 0}
+  33.33%,41.65%{background-position:0 50%}
+  41.66%,49.99%{background-position:33.333% 50%}
+  50%,58.32%{background-position:66.666% 50%}
+  58.33%,66.65%{background-position:100% 50%}
+  66.66%,74.99%{background-position:0 100%}
+  75%,83.32%{background-position:33.333% 100%}
+  83.33%,91.65%{background-position:66.666% 100%}
+  91.66%,100%{background-position:100% 100%}
+}
+@keyframes choreo-shadow{50%{width:34%;opacity:.65}}
+@keyframes choreo-caption{
+  0%,24.99%{color:#fff2d6;transform:translateY(-4px)}
+  25%,100%{color:#786985;transform:none}
+}
+@media(prefers-reduced-motion:reduce){.dance-floor .kirch-dancer{animation:none!important;background-position:0 0}.dance-floor .dancer-shadow{animation:none!important}}
