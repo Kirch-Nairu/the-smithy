@@ -1,4 +1,4 @@
-"""Build a centered 32-frame loop from the approved Brazilian 8-count poses."""
+"""Build a centered, ghost-free loop from the approved Brazilian 8-count poses."""
 
 from pathlib import Path
 import sys
@@ -9,8 +9,8 @@ from PIL import Image
 CELL = 256
 SOURCE_COLUMNS = 4
 SOURCE_ROWS = 2
-OUTPUT_COLUMNS = 8
-INBETWEENS = 4
+OUTPUT_COLUMNS = 4
+INBETWEENS = 1
 
 
 def extract_poses(source):
