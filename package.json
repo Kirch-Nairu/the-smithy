@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node scripts/validate-repository.mjs"
+    "check": "node scripts/validate-repository.mjs && node scripts/validate-dance-break.mjs"
   },
   "engines": {
     "node": ">=20"

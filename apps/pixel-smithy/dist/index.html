@@ -84,7 +84,7 @@
     <section class="party-section">
       <div class="section-heading"><div><p class="eyebrow">THE FOUR AT THE WORKBENCH</p><h2>MEET THE CREW</h2></div><p>Distinct disciplines. Equal places.<br>One shared engineering floor.</p></div>
       <div class="party-grid">
-        <a class="party-card kirch-card" href="https://github.com/Kirch-Nairu" target="_blank" rel="noreferrer"><div class="crew-sprite kirch" aria-hidden="true"></div><div class="crew-copy"><span class="level">HUMAN DIRECTION · FINAL ACCEPTANCE</span><h3>KIRCH IVAN BALITE</h3><code>@Kirch-Nairu</code><p>The orchestrator at the center of the floor: frames intent, directs the work, challenges assumptions, and owns final acceptance.</p><div class="persona"><span>DECISIVE</span><span>CURIOUS</span><span>HANDS-ON</span></div><blockquote>“Make the work legible. Then make it real.”</blockquote></div></a>
+        <article class="party-card kirch-card"><div class="crew-sprite kirch" aria-hidden="true"></div><div class="crew-copy"><span class="level">HUMAN DIRECTION · FINAL ACCEPTANCE</span><h3>KIRCH IVAN BALITE</h3><a class="crew-handle" href="https://github.com/Kirch-Nairu" target="_blank" rel="noreferrer"><code>@Kirch-Nairu</code></a><p>The orchestrator at the center of the floor: frames intent, directs the work, challenges assumptions, and owns final acceptance.</p><div class="persona"><span>DECISIVE</span><span>CURIOUS</span><span>HANDS-ON</span></div><blockquote>“Make the work legible. Then make it real.”</blockquote><button id="danceButton" class="pixel-button dance-button" type="button">♪ DANCE BREAK · 2:00</button></div></article>
         <a class="party-card jane-card" href="https://github.com/Kirion-Jane" target="_blank" rel="noreferrer"><div class="crew-sprite jane" aria-hidden="true"></div><div class="crew-copy"><span class="level">FC-001 · APPLICATION & BACKEND</span><h3>JANE KATHERYN ROSELLE RYN</h3><code>@Kirion-Jane</code><p>Warm, energetic, and relentlessly practical. Jane turns rough requirements and strange behavior into applications people can actually use.</p><div class="persona"><span>WARM</span><span>RESOURCEFUL</span><span>PRAGMATIC</span></div><blockquote>“Soft colors. Sharp commits.”</blockquote></div></a>
         <a class="party-card lucien-card" href="https://github.com/Kirion-Lucien" target="_blank" rel="noreferrer"><div class="crew-sprite lucien" aria-hidden="true"></div><div class="crew-copy"><span class="level">FC-002 · INTERFACE & FRONTEND</span><h3>LUCIEN MAREK SOL</h3><code>@Kirion-Lucien</code><p>Measured, exacting, and quietly expressive. Lucien makes system behavior visible through hierarchy, motion, accessibility, and meaningful state.</p><div class="persona"><span>PRECISE</span><span>ELEGANT</span><span>EMPATHIC</span></div><blockquote>“If the state matters, the interface must say so.”</blockquote></div></a>
         <a class="party-card nox-card" href="https://github.com/Kirion-Nox" target="_blank" rel="noreferrer"><div class="crew-sprite nox" aria-hidden="true"></div><div class="crew-copy"><span class="level">FC-003 · SYSTEMS & DATA</span><h3>NOX CAELUM VIRELL</h3><code>@Kirion-Nox</code><p>Faceless by design and ruthless about integrity. Nox follows boundaries, dependencies, data, and failure paths until the system tells the truth.</p><div class="persona"><span>AUSTERE</span><span>EXACT</span><span>LONG-TERM</span></div><blockquote>“A backup is not proof of recovery.”</blockquote></div></a>
@@ -98,6 +98,32 @@
       <a href="https://github.com/The-Kirion-Smithy" target="_blank" rel="noreferrer" class="pixel-button primary">ENTER THE GITHUB SMITHY ↗</a>
     </section>
   </main>
+  <div id="danceStage" class="dance-stage" hidden role="dialog" aria-modal="true" aria-labelledby="danceTitle">
+    <div class="dance-stars" aria-hidden="true"></div>
+    <button id="danceClose" class="dance-close" type="button" aria-label="Close dance break">×</button>
+    <div class="dance-copy">
+      <p class="eyebrow">ISOLATED FUN · SMITHY AFTER HOURS</p>
+      <h2 id="danceTitle">KIRCH'S CHILLY<br><span>CHA CHA BREAK</span></h2>
+      <p>Alternating knee lifts, finger points, and side-to-side swagger—pixel-forged from the reference choreography.</p>
+      <div class="beat-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="dance-hint">Music starts at the best part: <strong>2:00</strong> · Press <kbd>Esc</kbd> to leave.</p>
+      <a class="dance-track-link" href="https://www.youtube.com/watch?v=5-W6Sn9lxNE&t=120s" target="_blank" rel="noreferrer">OPEN THE 2:00 TRACK ↗</a>
+    </div>
+    <div class="dance-floor" aria-label="Animated pixel Kirch Ivan Balite performing the Chilly Cha Cha choreography">
+      <div class="kirch-dancer" aria-hidden="true">
+        <div class="dancer-shadow"></div>
+        <div class="dancer-body">
+          <span class="dancer-hair"></span><span class="dancer-head"></span>
+          <span class="dancer-torso"></span><span class="dancer-arm arm-left"></span><span class="dancer-arm arm-right"></span>
+          <span class="dancer-hand hand-left"></span><span class="dancer-hand hand-right"></span>
+          <span class="dancer-leg leg-left"></span><span class="dancer-leg leg-right"></span>
+          <span class="dancer-shoe shoe-left"></span><span class="dancer-shoe shoe-right"></span>
+        </div>
+      </div>
+      <div class="dance-caption"><span>STEP</span><span>POINT</span><span>CHA-CHA</span></div>
+    </div>
+    <div id="danceMusic" class="dance-music" aria-label="Chilly Cha Cha music player"></div>
+  </div>
   <footer><span>© 2026 KIRCH–NAIRU</span><span>MADE WITH 🔥 IN THE KIRION FORGE</span><a href="#world">BACK TO TOP ↑</a></footer>
   <script src="game.js"></script>
 </body>
