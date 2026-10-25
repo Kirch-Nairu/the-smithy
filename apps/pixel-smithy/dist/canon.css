@@ -50,3 +50,9 @@
   25%,100%{color:#786985;transform:none}
 }
 @media(prefers-reduced-motion:reduce){.dance-floor .kirch-dancer{animation:none!important;background-position:0 0}.dance-floor .dancer-shadow{animation:none!important}}
+
+/* Reference-locked choreography: the canvas renders 48 centered 256px cells. */
+.dance-floor canvas.kirch-dancer{position:absolute;z-index:3;left:50%;bottom:58px;width:min(408px,86%);height:auto;aspect-ratio:1;display:block;background:none;animation:none;transform:translateX(-50%);clip-path:none;image-rendering:pixelated;filter:drop-shadow(0 18px 8px #09071199)}
+.dance-floor .dancer-shadow{left:50%;bottom:70px;width:min(230px,48%);transform:translateX(-50%)}
+@media(max-width:850px){.dance-floor canvas.kirch-dancer{bottom:52px;width:min(350px,88%)}}
+@media(prefers-reduced-motion:reduce){.dance-floor canvas.kirch-dancer{transform:translateX(-50%)}}
